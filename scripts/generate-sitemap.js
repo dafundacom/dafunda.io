@@ -6,12 +6,12 @@ const siteMetadata = require("@/data/siteMetadata")
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js")
   const pages = await globby([
-    "@/pages/*.js",
-    "@/data/blog/**/*.mdx",
-    "@/data/blog/**/*.md",
+    "src/pages/*.js",
+    "src/data/blog/**/*.mdx",
+    "src/data/blog/**/*.md",
     "public/tags/**/*.xml",
-    "!@/pages/_*.js",
-    "!@/pages/api",
+    "!src/pages/_*.js",
+    "!src/pages/api",
   ])
 
   const sitemap = `
@@ -20,17 +20,17 @@ const siteMetadata = require("@/data/siteMetadata")
             ${pages
               .map((page) => {
                 const path = page
-                  .replace("@/pages/", "/")
-                  .replace("@/data/blog", "/blog")
+                  .replace("src/pages/", "/")
+                  .replace("src/data/blog", "/blog")
                   .replace("public/", "/")
                   .replace(".js", "")
                   .replace(".mdx", "")
                   .replace(".md", "")
-                  .replace("s/feed.xml", "")
+                  .replace("feed.xml", "")
                 const route = path === "/index" ? "" : path
                 if (
-                  page === `pages/404.js` ||
-                  page === `pages/blog/[...slug].js`
+                  page === `src/pages/404.js` ||
+                  page === `src/pages/blog/[...slug].js`
                 ) {
                   return
                 }
