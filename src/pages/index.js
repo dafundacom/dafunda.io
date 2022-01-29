@@ -18,11 +18,11 @@ export default function Home() {
         description={siteMetadata.description}
       />
 
-      <div className="relative mt-10 overflow-hidden bg-white md:mt-12 lg:mt-20">
+      <div className="relative mt-10 overflow-hidden bg-white md:mt-12 lg:mt-20 dark:bg-gray-900">
         <div className="mx-auto max-w-7xl">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:pb-28 lg:w-full xl:pb-32">
+          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:pb-28 lg:w-full xl:pb-32 dark:bg-gray-900">
             <svg
-              className="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block"
+              className="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block dark:text-gray-900"
               fill="currentColor"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
@@ -39,10 +39,10 @@ export default function Home() {
                     Dafunda.io
                   </span>
                 </h1>
-                <p className="mt-3 text-base text-gray-500 sm:max-w-xl sm:mt-5 sm:mx-auto sm:text-lg md:mt-5 md:text-xl lg:mx-0">
+                <p className="mt-3 text-base text-gray-500 sm:max-w-xl sm:mt-5 sm:mx-auto sm:text-lg md:mt-5 md:text-xl lg:mx-0 dark:text-gray-300">
                   The technology you use impresses no one.
                 </p>
-                <p className="mt-1 text-base text-gray-500 sm:max-w-xl sm:mx-auto sm:text-lg md:text-xl lg:mx-0">
+                <p className="mt-1 text-base text-gray-500 sm:max-w-xl sm:mx-auto sm:text-lg md:text-xl lg:mx-0 dark:text-gray-300">
                   The experience you create with it is everything.
                 </p>
                 <div className="mt-5 sm:flex sm:justify-center sm:mt-8 lg:justify-start">
