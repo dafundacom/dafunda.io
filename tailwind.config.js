@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
 
 module.exports = {
@@ -11,6 +11,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        primary: ["Inter", ...fontFamily.sans],
+        sans: ["Inter", "sans-serif"],
+      },
       spacing: {
         "9/16": "56.25%",
       },
@@ -19,9 +23,6 @@ module.exports = {
         12: "3rem",
         13: "3.25rem",
         14: "3.5rem",
-      },
-      fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,
