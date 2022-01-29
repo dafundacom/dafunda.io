@@ -20,7 +20,7 @@ export default function Home() {
 
       <div className="relative mt-10 overflow-hidden bg-white md:mt-12 lg:mt-20 dark:bg-gray-900">
         <div className="mx-auto max-w-7xl">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:pb-28 lg:w-full xl:pb-32 dark:bg-gray-900">
+          <div className="relative pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:pb-28 lg:w-full xl:pb-32 dark:bg-gray-900">
             <svg
               className="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block dark:text-gray-900"
               fill="currentColor"
