@@ -6,7 +6,7 @@ import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata"
 
 const editUrl = (fileName) =>
-  `${siteMetadata.siteRepo}/blob/master/src/data/blog/${fileName}`
+  `${siteMetadata.siteRepo}/blob/main/src/data/blog/${fileName}`
 
 const postDateTemplate = {
   weekday: "long",
@@ -34,7 +34,7 @@ export default function PostLayout({
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="font-medium leading-6 text-base text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(
                         siteMetadata.locale,
@@ -50,23 +50,23 @@ export default function PostLayout({
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 xl:gap-x-6 xl:grid xl:grid-cols-4 dark:divide-gray-700"
+            className="divide-gray-200 divide-y pb-8 xl:divide-y-0 xl:gap-x-6 xl:grid xl:grid-cols-4 dark:divide-gray-700"
             style={{ gridTemplateRows: "auto 1fr" }}
           >
             <dl></dl>
-            <div className="divide-y divide-gray-200 xl:col-span-3 xl:pb-0 xl:row-span-2 dark:divide-gray-700">
-              <div className="pt-10 pb-8 prose max-w-none dark:prose-dark">
+            <div className="divide-gray-200 divide-y xl:col-span-3 xl:pb-0 xl:row-span-2 dark:divide-gray-700">
+              <div className="max-w-none pb-8 prose pt-10 dark:prose-dark">
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="pb-6 pt-6 text-gray-700 text-sm dark:text-gray-300">
                 <Link href={editUrl(fileName)}>{"View on GitHub"}</Link>
               </div>
             </div>
             <footer>
-              <div className="text-sm font-medium leading-5 divide-gray-200 xl:col-start-1 xl:divide-y xl:row-start-2 dark:divide-gray-700">
+              <div className="divide-gray-200 font-medium leading-5 text-sm xl:col-start-1 xl:divide-y xl:row-start-2 dark:divide-gray-700">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                    <h2 className="text-gray-500 text-xs tracking-wide uppercase dark:text-gray-400">
                       Tags
                     </h2>
                     <div className="flex flex-wrap">
@@ -80,7 +80,7 @@ export default function PostLayout({
                   <div className="flex justify-between py-4 xl:block xl:py-8 xl:space-y-8">
                     {prev && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h2 className="text-gray-500 text-xs tracking-wide uppercase dark:text-gray-400">
                           Previous Article
                         </h2>
                         <div className="text-primary-500 dark:hover:text-primary-400 hover:text-primary-600">
@@ -90,7 +90,7 @@ export default function PostLayout({
                     )}
                     {next && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h2 className="text-gray-500 text-xs tracking-wide uppercase dark:text-gray-400">
                           Next Article
                         </h2>
                         <div className="text-primary-500 dark:hover:text-primary-400 hover:text-primary-600">

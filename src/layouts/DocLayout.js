@@ -5,7 +5,7 @@ import { BlogSEO } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata"
 
 const editUrl = (fileName) =>
-  `${siteMetadata.siteRepo}/blob/master/src/data/doc/${fileName}`
+  `${siteMetadata.siteRepo}/blob/main/src/data/doc/${fileName}`
 
 export default function DocLayout({ frontMatter, children }) {
   const { slug, fileName, title } = frontMatter
