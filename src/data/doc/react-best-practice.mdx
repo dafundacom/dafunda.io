@@ -1,0 +1,282 @@
+---
+title: "React Best Practice"
+tags: "coding"
+description: "React Best Practice"
+---
+
+### 1. Use JSX ShortHand
+
+Bad:
+
+```jsx
+return <Button isFullWidth={true} />
+```
+
+Good:
+
+```jsx
+return <Button isFullWidth />
+```
+
+### 2. Use Ternary Operators
+
+Bad:
+
+```jsx
+if (role === "admin") {
+  return <AdminPage />
+} else {
+  return <NormalPage />
+}
+```
+
+Good:
+
+```jsx
+return role === "admin" ? <AdminPage /> : <NormalPage />
+```
+
+### 3. Use Fragment over HTML Elements
+
+Always use Fragment over Div or other HTML Elements. It keeps the code clean and
+is also beneficial for performance because one less node is created in the
+virtual DOM.
+
+Bad:
+
+```jsx
+return (
+  <div>
+    <Header />
+    <Container>
+      <Component>
+    </Container>
+  </div>
+)
+```
+
+Good:
+
+```jsx
+return (
+  <>
+    <Header />
+    <Container>
+      <Component>
+    </Container>
+  </>
+)
+```
+
+### 4. Don't Define a Function Inside Render
+
+Bad:
+
+```jsx
+<button onClick={() => dispatch(SUBMIT_DATA)}>Submit</button>
+```
+
+Good:
+
+```jsx
+const submitHandler = () => dispatch(SUBMIT_DATA)
+
+return <button onClick={submitHandler}>Submit</button>
+```
+
+### 5. Alt Prop
+
+Always include an alt prop in your `<img> ` tags.
+
+Bad:
+
+```jsx
+<img src="/images.png" />
+```
+
+Good:
+
+```jsx
+<img src="/images.png" alt="alt image" />
+```
+
+### 6. Use Object Destructuring
+
+Bad:
+
+```jsx
+return (
+  <>
+    <div>{post.title}</div>
+    <div>{post.category}</div>
+    <div>{post.author}</div>
+    <div>{post.description}</div>
+  </>
+)
+```
+
+Good:
+
+```jsx
+const { title, title, category, description } = post
+
+return (
+  <>
+    <div>{title}</div>
+    <div>{category}</div>
+    <div>{author}</div>
+    <div>{description}</div>
+  </>
+)
+```
+
+### 7. Do not use underscores in any internal React method.
+
+Bad:
+
+```jsx
+const _submitHandler = () => {
+  // do something
+}
+```
+
+Good:
+
+```jsx
+const submitHandler = () => {
+  // do something
+}
+```
+
+### 8. Don't use curly braces when passing string props
+
+Bad:
+
+```jsx
+<Card title={'This is title example'}
+```
+
+Good:
+
+```jsx
+<Card title="This is title example">
+```
+
+### 9. Best Practice Import
+
+Separate imports from npm and components made in the project to make it more
+readable and easy to fix if there are errors.
+
+The rule of thumb is to keep the import order like this:
+
+- Built-in
+- External
+- Internal
+
+Bad:
+
+```jsx
+import { Navigation } from "@/components/Navigation"
+import React from "react"
+import Image from "next/image"
+import { Footer } from "@/components/Footer"
+import Link from "next/link"
+import { Button } from "@/components/Button"
+```
+
+Good:
+
+```jsx
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+
+import { Button } from "@/components/Button"
+import { Navigation } from "@/components/Navigation"
+import { Footer } from "@/components/Footer"
+```
+
+### 10. Self-Closing Tags
+
+If Component doesn't have any children, then use selg-closing tags. Its improve
+readability.
+
+Bad:
+
+```jsx
+<Header variant="dark"></Header>
+```
+
+Good:
+
+```jsx
+<Heaader variant="dark" />
+```
+
+### 11.Use Template Literal
+
+Bad:
+
+```jsx
+const greeting = "Hello, " + user.name + "Have a nice day!"
+```
+
+Good:
+
+```jsx
+const greeting = `Hello, ${user.name} Have a Nice Day!`
+```
+
+### 12. Prop Naming
+
+Always use camelCase for prop names and PascalCase if the prop value is React
+Component.
+
+Bad:
+
+```jsx
+<Card Title="judul" description="deskripsi" />
+```
+
+Good:
+
+```jsx
+<Card title="judul" description="deskripsi" Metadata={MedatadaComponent} />
+```
+
+### 13. Reserved Prop Naming
+
+Don't use DOM component prop names for passing props between components because
+others might not expect these names.
+
+Bad:
+
+```jsx
+<Button style="warning">Button</Button>
+```
+
+Good:
+
+```jsx
+<Button variant="warning">Button</Button>
+```
+
+### 14. Component Naming
+
+Always use PascalCase for components naming.
+
+Bad:
+
+```jsx
+import postCard from "/@/components/postCard"
+
+const postCard = <postCard />
+```
+
+Good:
+
+```jsx
+import PostCard from "@/components/PostCard"
+
+const PostCard = <PostCard />
+```
