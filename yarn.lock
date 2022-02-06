@@ -7374,10 +7374,10 @@ rehype-autolink-headings@^6.1.1:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
 
-rehype-citation@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/rehype-citation/-/rehype-citation-0.2.0.tgz#887e1b9f67247ca87671bf64d53238a139016755"
-  integrity sha512-6CchWRT2b5r0crXjEEmLjsUgviL5Ibe9hhZfrYXZLHc5FZltqThF/kD8rBKQ0XmzG7N4XZGy5yNMWBIPFrmN6Q==
+rehype-citation@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/rehype-citation/-/rehype-citation-0.2.1.tgz#db230d248ee465ef0e861e95d7cd01fc7e207b3f"
+  integrity sha512-H3PvpQ6FXPqcWOsbwDDFXaURKqXHcs5Q6tFtSgVs6rPJzMUAj266gWW1aBscbDwDy/7C4QKGlcjiT5IOsxu2Tw==
   dependencies:
     "@citation-js/core" "^0.5.4"
     "@citation-js/date" "^0.5.1"
