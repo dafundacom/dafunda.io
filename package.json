@@ -24,7 +24,7 @@
     "next": "12.0.10",
     "next-compose-plugins": "^2.2.1",
     "next-themes": "^0.0.15",
-    "preact": "^10.6.5",
+    "preact": "^10.6.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
-    "@commitlint/cz-commitlint": "^16.1.0",
+    "@commitlint/cz-commitlint": "^16.2.3",
     "@next/bundle-analyzer": "12.0.10",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/forms": "^0.4.0",
