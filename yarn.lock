@@ -1424,10 +1424,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@next/bundle-analyzer@12.1.1":
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-12.1.1.tgz#87798e7b50cc6655fcf7df0da05f91dfd1573587"
-  integrity sha512-Mxi08C15vLCY3eAR7KEatWkNuQ7H706K/o9tw99qWz0GHl3+taVPad3kOX1xVHdE8GuaMHnbekiug4mYdV+3hQ==
+"@next/bundle-analyzer@12.1.4":
+  version "12.1.4"
+  resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-12.1.4.tgz#22afb920b769a54a8da118af0786df0a1f4fca47"
+  integrity sha512-Xw3gxBTOAS5bcayUl2hDYeCbAFIR+7poiGW4Wi/KGcsjgVRetKBS6akZ1AZsz36CUOdCxajKO45B6CeAaKtcqA==
   dependencies:
     webpack-bundle-analyzer "4.3.0"
 
@@ -1436,10 +1436,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.1.1.tgz#8a927397697ee9d94852feb5fed57a813d299979"
   integrity sha512-VmTRkfo/IXOQCATndjW3OjKb8zmAuB07eDdzO9XvuXZP87SyvnCYw3jrhUuFhOe/FVsKiloafa5LJfToUpvjUQ==
 
-"@next/eslint-plugin-next@12.1.1":
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.1.1.tgz#e3e51503e9d7f987a0e080344648bc84ac1e8eb8"
-  integrity sha512-5hd1VFWZzECADhvA+OE+g0CnrRBFZbPm03HbiUtpk7XeluNn7xVxBU6XvNQA+YrQ7qe5jCK9q7R8MbI9R55Y/Q==
+"@next/eslint-plugin-next@12.1.4":
+  version "12.1.4"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.1.4.tgz#9c52637af8eecab24dac3f2e5098376f6fc2dff4"
+  integrity sha512-BRy565KVK6Cdy8LHaHTiwctLqBu/RT84RLpESug70BDJzBlV8QBvODyx/j7wGhvYqp9kvstM05lyb6JaTkSCcQ==
   dependencies:
     glob "7.1.7"
 
@@ -3640,12 +3640,12 @@ escape-string-regexp@^5.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz#4683126b500b61762f2dbebace1806e8be31b1c8"
   integrity sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==
 
-eslint-config-next@12.1.1:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.1.1.tgz#11f948c5f4959267c2157dff8f2c28d067e3e1d9"
-  integrity sha512-+Ql9F07Pafs+cDgy8Zp0F8FxCBq7ke02ZyC2/MMEiGAX+WlnuUCrboBDnfzmHJpAAkcBPjUthunu6LBnF9KWIQ==
+eslint-config-next@12.1.4:
+  version "12.1.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.1.4.tgz#939ea2ff33034763300bf1e62482cea91212d274"
+  integrity sha512-Uj0jrVjoQbg9qerxRjSHoOOv3PEzoZxpb8G9LYct25fsflP8xIiUq0l4WEu2KSB5owuLv5hie7wSMqPEsHj+bQ==
   dependencies:
-    "@next/eslint-plugin-next" "12.1.1"
+    "@next/eslint-plugin-next" "12.1.4"
     "@rushstack/eslint-patch" "1.0.8"
     "@typescript-eslint/parser" "5.10.1"
     eslint-import-resolver-node "0.3.4"
@@ -4616,6 +4616,14 @@ hast-util-embedded@^2.0.0:
   integrity sha512-vEr54rDu2CheBM4nLkWbW8Rycf8HhkA/KsrDnlyKnvBTyhyO+vAG6twHnfUbiRGo56YeUBNCI4HFfHg3Wu+tig==
   dependencies:
     hast-util-is-element "^2.0.0"
+
+hast-util-from-dom@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/hast-util-from-dom/-/hast-util-from-dom-4.1.0.tgz#8a09b3bb9c624371e3d5fae114678f663f928d06"
+  integrity sha512-0EMIYQVIhRfiC1LVdTsvM4yTY0rM/v63wwoYmOYV02mIOASYeQrfQekG4Jhge2kOAMaNFbvppUma47rbeWWE5Q==
+  dependencies:
+    hastscript "^7.0.0"
+    web-namespaces "^2.0.0"
 
 hast-util-from-parse5@^7.0.0, hast-util-from-parse5@^7.1.0:
   version "7.1.0"
@@ -7399,10 +7407,10 @@ rehype-autolink-headings@^6.1.1:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
 
-rehype-citation@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/rehype-citation/-/rehype-citation-0.2.0.tgz#887e1b9f67247ca87671bf64d53238a139016755"
-  integrity sha512-6CchWRT2b5r0crXjEEmLjsUgviL5Ibe9hhZfrYXZLHc5FZltqThF/kD8rBKQ0XmzG7N4XZGy5yNMWBIPFrmN6Q==
+rehype-citation@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/rehype-citation/-/rehype-citation-0.3.0.tgz#dcc7da9fc54f6eb4e698012631f093954844bc8b"
+  integrity sha512-hookIfIscIaNWllWJ0vq1KDNCOKVkiI2Z6rVmmWSeE/ecrj3GXKUWoznvjlVGmypimOuKMQpyB7fyg1FRVXC2Q==
   dependencies:
     "@citation-js/core" "^0.5.4"
     "@citation-js/date" "^0.5.1"
@@ -7412,8 +7420,30 @@ rehype-citation@0.2.0:
     "@citation-js/plugin-csl" "^0.5.5"
     citeproc "^2.4.62"
     cross-fetch "^3.1.5"
+    hast-util-from-dom "^4.1.0"
     hast-util-from-parse5 "^7.1.0"
     parse5 "^6.0.1"
+    rehype-citation "^0.2.5-rc.0"
+    unified "^10.1.0"
+    unist-util-visit "^4.0.0"
+
+rehype-citation@^0.2.5-rc.0:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/rehype-citation/-/rehype-citation-0.2.5.tgz#386a9e1f8f36b6363209396e10525511df5881a4"
+  integrity sha512-d4s4JPjjCqB7xqeIz7qf4oemhuTcFhYDvP57ciOwymLsaDiQhfOq6iJsnCBXmBP8a4O2EHDsQg5mwUTMIKBfRA==
+  dependencies:
+    "@citation-js/core" "^0.5.4"
+    "@citation-js/date" "^0.5.1"
+    "@citation-js/name" "^0.4.2"
+    "@citation-js/plugin-bibjson" "^0.5.4"
+    "@citation-js/plugin-bibtex" "^0.5.5"
+    "@citation-js/plugin-csl" "^0.5.5"
+    citeproc "^2.4.62"
+    cross-fetch "^3.1.5"
+    hast-util-from-dom "^4.1.0"
+    hast-util-from-parse5 "^7.1.0"
+    parse5 "^6.0.1"
+    rehype-citation "^0.2.5-rc.0"
     unified "^10.1.0"
     unist-util-visit "^4.0.0"
 
