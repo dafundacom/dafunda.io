@@ -15,7 +15,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "esbuild": "^0.14.29",
+    "esbuild": "^0.14.42",
     "firebase-admin": "^10.0.2",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.3",
