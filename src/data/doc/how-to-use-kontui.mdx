@@ -1,0 +1,244 @@
+---
+title: "How to use Kontui"
+tags: "coding,library"
+description: "How to use Kontui React UI Library"
+---
+
+<TOCInline toc={props.toc} asDisclosure />
+
+## Setup
+
+Ensure use NodeJS 16 or latest version, and a package manager such as NPM, PNPM,
+or Yarn.
+
+### Install
+
+```jsx
+npm i @kontui/react
+```
+
+```jsx
+pnpm add @kontui/react
+```
+
+```jsx
+yarn add @kontui/react
+```
+
+### Usage
+
+#### Use Theme Provider
+
+On your App.jsx or \_app.jsx use this code:
+
+```jsx
+import { ThemProvider, CssBase } from "@kontui/react"
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <ThemProvider>
+      <CssBase />
+      <Component {...pageProps} />
+    </ThemProvider>
+  )
+}
+```
+
+#### Import Component
+
+```jsx
+import { Button, Text, Box } from "@kontui/react"
+
+const Page = () => {
+  return (
+    <>
+      <Box>Box</Box>
+      <Text>Text</Text>
+      <Button>Button</Button>
+    </>
+  )
+}
+```
+
+## Customization
+
+You can use built in Kontui color or customize default color with your own.
+
+### Using styled-jsx
+
+```jsx
+;() => {
+  const theme = useTheme()
+  return (
+    <div
+      style={{
+        width: "300px",
+        height: "100px",
+        borderRadius: theme.layout.radius,
+        background: theme.palette.secondary,
+      }}
+    >
+      <span
+        style={{
+          color: theme.palette.success,
+          paddingLeft: theme.layout.gapQuarter,
+        }}
+      >
+        My first component.
+      </span>
+    </div>
+  )
+}
+```
+
+### API Customization
+
+```jxs
+const them:BaseThemes = useTheme()
+
+export type BaseThemes = {
+    colorScheme: string
+    font: BaseThemesFont
+    layout: BaseThemesLayout
+    palette: BaseThemesLayout
+    breakpoints: BaseThemesBreakpoints
+    expressiveness: BaseThemesExpressiveness
+  }
+```
+
+### Get Preset Types
+
+```jsx
+import {
+  BaseThemes,
+  BaseThemesFont,
+  BaseThemesLayout,
+  BaseThemesPalette,
+  BaseThemesBreakpoints,
+  BaseThemesExpressiveness,
+} from "@kontui/react"
+
+const customPalette: BaseThemesPalette = {}
+```
+
+You can check all available customizaton
+[here](https://github.com/dafundacom/kontui/tree/main/packages/theme/src/presets).
+
+### Customizing Theme
+
+You just need to provide a new theme `Object`, and all the components will
+changed automatically.
+
+```jsx
+import { Themes } from "@kontui/react"
+
+export const greenTheme = Themes.createFromLight({
+  type: "green",
+  palette: {
+    success: "green",
+    warning: "green",
+    error: "green",
+  },
+})
+
+export const redTheme = Themes.createFromLight({
+  type: "red",
+  palette: {
+    success: "red",
+    warning: "red",
+    error: "red",
+  },
+})
+```
+
+and then just switch like on example below.
+
+### Switch Themes
+
+Kontui supports dark mode and can easily to create or inherit modifications.
+
+```jsx
+import * as React from "react"
+import { Button, CssBase, ThemeProvider } from "@kontui/react"
+
+const App = ({ Component, pageProps }) => {
+  const [themeType, setThemeType] = React.useState("light")
+  const switchThemes = () => {
+    setThemeType((last) => (last === "dark" ? "light" : "dark"))
+  }
+  return (
+    <ThemProvider themeType={themeType}>
+      <CssBase />
+      <Button onClick={switchThemes}>Change Theme</Button>
+      <Component {...pageProps} />
+    </ThemProvider>
+  )
+}
+```
+
+### Overide base component style with `className`
+
+```jsx
+import { Button, Row } from "@kontui/react"
+
+const CustomButton = () => {
+    return (
+    <>
+      <Row>
+        <Button className="custom-button">Button</Button>
+      </Row>
+      <style jsx>
+        .custom-button {
+          border-radius: 999px;
+        }}
+      </style>
+    </>
+    )
+  }
+
+```
+
+## Change size component
+
+You can change size on component with these properties:
+
+```
+| Attribute               | Description                | Type           | Default |
+| ----------------------- | -------------------------- | -------------- | ------- |
+| **scale**               | scale value                | number         | -       |
+| **unit**                | scale unit                 | string         | `16px`  |
+| **width / w**           | component width            | string, number | 'auto'  |
+| **height / h**          | component height           | string, number | 'auto'  |
+| **font**                | font size                  | string, number | -       |
+| **margin**              | all margin size            | string, number | `0`     |
+| **marginLeft / ml**     |                            | string, numbe  | -       |
+| **marginRight / mr**    |                            | string, numbe  | -       |
+| **marginTop / mt**      |                            | string, numbe  | -       |
+| **marginBottom / mb**   |                            | string, numbe  | -       |
+| **padding**             | all padding size           | string, numbe  | `0`     |
+| **paddingLeft / pl**    |                            | string, numbe  | -       |
+| **paddingRight / pr**   |                            | string, numbe  | -       |
+| **paddingTop / pt**     |                            | string, numbe  | -       |
+| **paddingBottom / pb**  |                            | string, numbe  | -       |
+| **mx**&nbsp;(`ml & mr`) | horizontal axis of margin  | string, numbe  | -       |
+| **my**&nbsp;(`mt & mb`) | vertical axis of margin    | string, numbe  | -       |
+| **px**&nbsp;(`pl & pr`) | horizontal axis of padding | string, numbe  | -       |
+| **py**&nbsp;(`pt & pb`) | vertical axis of padding   | string, numbe  | -       |
+```
+
+example:
+
+```jsx
+import { Button } from "@kontui/react"
+
+const App = () => {
+  return (
+    <>
+      <Button scale={2}>Button</Button>
+      <Button paddding="12px">Button</Button>
+    </>
+  )
+}
+```
+
+## For other specipic component you can check on Kontui storybook.
